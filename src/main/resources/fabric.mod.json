@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "gate_enc",
+	"version": "${version}",
+	"name": "Gate Encounters",
+	"description": "Linear progression RPG mod based on popular manhwa tropes such as gates/dungeons.",
+	"authors": [
+		"GimGirin"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/gate_enc/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.gim.gate_enc.GateEncounters"
+		],
+		"client": [
+			"net.gim.gate_enc.GateEncountersClient"
+		],
+		"fabric-datagen": [
+			"net.gim.gate_enc.GateEncountersDataGenerator"
+		]
+	},
+	"mixins": [
+		"gate_enc.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.11",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
