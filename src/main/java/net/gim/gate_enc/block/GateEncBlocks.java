@@ -15,7 +15,7 @@ import net.minecraft.util.Identifier;
 
 public class GateEncBlocks {
 
-    public static final Block TEST_BLOCK = registerBlock("test_block",
+    public static final Block TEST_BLOCK = registerBlock("test/test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(5.0F, 6.0F)));
 
 

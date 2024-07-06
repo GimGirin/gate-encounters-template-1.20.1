@@ -1,6 +1,6 @@
 {
   "parent": "block/cube_all",
   "textures": {
-    "all": "gate_enc:block/test_block"
+    "all": "gate_enc:block/test/test_block"
   }
 }

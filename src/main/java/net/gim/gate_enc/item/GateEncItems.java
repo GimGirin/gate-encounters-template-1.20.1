@@ -1,19 +1,33 @@
 package net.gim.gate_enc.item;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
-import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
-import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.gim.gate_enc.GateEncounters;
 import net.minecraft.item.Item;
-import net.minecraft.item.ItemGroups;
+import net.minecraft.item.SwordItem;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
 public class GateEncItems {
 
-    public static final Item TEST_ITEM = registerItem("test_item", new Item(new FabricItemSettings()));
-    public static final Item TEST_ITEM_ANIM = registerItem("test_item_anim", new Item(new FabricItemSettings()));
+    public static final Item TEST_ITEM = registerItem("test/test_item", new Item(new FabricItemSettings()));
+    public static final Item TEST_ITEM_ANIM = registerItem("test/test_item_anim", new Item(new FabricItemSettings()));
+
+    // damage = 1 + tool damage + material damage
+    // attack speed = 4 + tool attack speed
+
+    // GATE ENCOUNTERS ASSOCIATION GUILD ITEMS
+    public static final Item GUILD_COIN = registerItem("guild_coin_anim", new Item(new FabricItemSettings().maxCount(64)));
+
+
+    // ADVENTURER'S SET ITEMS
+    public static final Item ADVENTURERS_SCALE = registerItem("advent/adventurers_scale_anim", new Item(new FabricItemSettings().maxCount(16)));
+    public static final Item ADVENT_PLATE = registerItem("advent/advent_plate_anim", new Item(new FabricItemSettings().maxCount(8)));
+
+    public static final Item ADVENTURERS_SWORD = registerItem("advent/adventurers_sword_anim", new SwordItem(
+            GateEncToolMaterial.ADVENT, 20, -3, new FabricItemSettings()));
+    public static final Item ADVENT_SWORD = registerItem("advent/advent_sword_anim", new SwordItem(
+            GateEncToolMaterial.ADVENT, 24, -2, new FabricItemSettings()));
 
 
 

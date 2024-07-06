@@ -25,6 +25,21 @@ public class GateEncItemGroups {
 
                     }).build());
 
+    public static final ItemGroup GUILD_GROUP = Registry.register(Registries.ITEM_GROUP,
+            new Identifier(GateEncounters.MOD_ID, "guild"),
+            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.guild"))
+                    .icon(() -> new ItemStack(GateEncItems.GUILD_COIN)).entries((displayContext, entries) -> {
+                        // Weapons
+                        entries.add(GateEncItems.ADVENTURERS_SWORD);
+                        entries.add(GateEncItems.ADVENT_SWORD);
+                        // Items
+                        entries.add(GateEncItems.GUILD_COIN);
+                        entries.add(GateEncItems.ADVENTURERS_SCALE);
+                        entries.add(GateEncItems.ADVENT_PLATE);
+                        // Blocks
+
+                    }).build());
+
 
     public static void registerItemGroups() {
         GateEncounters.LOGGER.info("Registering Item Groups for " + GateEncounters.MOD_ID);

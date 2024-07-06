@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "gate_enc:item/test_item"
+    "layer0": "gate_enc:item/test/test_item"
   }
 }

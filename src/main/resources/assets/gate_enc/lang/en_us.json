@@ -1,10 +1,25 @@
 {
-  "comment": "TEST_GROUP",
+  "comment": "TEST_GROUP (delete all when ready for release)",
 
-  "item.gate_enc.test_item": "Mod Icon",
-  "item.gate_enc.test_item_anim": "Animated Mod Icon",
+  "itemgroup.test": "Test Mod Items",
 
-  "block.gate_enc.test_block": "Mod Icon Block",
+  "item.gate_enc.test.test_item": "Mod Icon",
+  "item.gate_enc.test.test_item_anim": "Animated Mod Icon",
 
-  "itemgroup.test": "Test Item Group"
+  "block.gate_enc.test.test_block": "Mod Icon Block",
+
+
+  "comment": "GATE ENCOUNTER GUILD RELATED ITEMS",
+
+  "item.gate_enc.guild_coin_anim": "GEA Guild Coin",
+
+  "comment": "ADVENTURER'S SET",
+
+  "item.gate_enc.advent.adventurers_scale_anim": "Adventurer's Scale",
+  "item.gate_enc.advent.advent_plate_anim": "Plate of Advent",
+
+  "item.gate_enc.advent.adventurers_sword_anim": "Adventurer's Sword",
+  "item.gate_enc.advent.advent_sword_anim": "Sword of Advent",
+
+  "itemgroup.guild": "GEA Guild Items"
 }

@@ -1,0 +1,36 @@
+{
+	"parent": "item/handheld",
+	"textures": {
+		"layer0": "gate_enc:item/advent/adventurers_sword_anim"
+	},
+	"display": {
+		"thirdperson_righthand": {
+			"rotation": [135, 90, 0],
+			"translation": [0, 9, 0],
+			"scale": [1.8, 1.8, 0.5]
+		},
+		"thirdperson_lefthand": {
+			"rotation": [-135, 90, 0],
+			"translation": [0, 9, 0],
+			"scale": [1.8, 1.8, 0.5]
+		},
+		"firstperson_righthand": {
+			"rotation": [-145, -90, 0],
+			"translation": [1.5, 5.5, -3.75],
+			"scale": [1.8, 1.8, 0.5]
+		},
+		"firstperson_lefthand": {
+			"rotation": [-145, 90, 0],
+			"translation": [1.5, 5.5, -3.75],
+			"scale": [1.8, 1.8, 0.5]
+		},
+		"ground": {
+			"rotation": [167.89, -11.34, 147.13],
+			"translation": [0, 1.5, 0],
+			"scale": [0.5, 0.5, 0.25]
+		},
+		"gui": {
+			"rotation": [0, 180, 0]
+		}
+	}
+}
