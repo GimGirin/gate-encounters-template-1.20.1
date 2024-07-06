@@ -1,0 +1,10 @@
+{
+  "comment": "TEST_GROUP",
+
+  "item.gate_enc.test_item": "Mod Icon",
+  "item.gate_enc.test_item_anim": "Animated Mod Icon",
+
+  "block.gate_enc.test_block": "Mod Icon Block",
+
+  "itemgroup.test": "Test Item Group"
+}

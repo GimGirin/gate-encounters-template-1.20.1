@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    " # ",
+    " G ",
+    " E "
+  ],
+  "key": {
+    "#": {
+      "item": "gate_enc:test_item"
+    },
+    "G": {
+      "item": "minecraft:gold_block"
+    },
+    "E": {
+      "item": "minecraft:end_portal_frame"
+    }
+  },
+  "result": {
+    "item": "gate_enc:test_block"
+  }
+}

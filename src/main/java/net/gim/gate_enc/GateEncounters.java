@@ -2,6 +2,9 @@ package net.gim.gate_enc;
 
 import net.fabricmc.api.ModInitializer;
 
+import net.gim.gate_enc.block.GateEncBlocks;
+import net.gim.gate_enc.item.GateEncItemGroups;
+import net.gim.gate_enc.item.GateEncItems;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -11,7 +14,9 @@ public class GateEncounters implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
+		GateEncItemGroups.registerItemGroups();
 
-		LOGGER.info("Hello Fabric world!");
+		GateEncItems.registerModItems();
+		GateEncBlocks.registerModBlocks();
 	}
 }
