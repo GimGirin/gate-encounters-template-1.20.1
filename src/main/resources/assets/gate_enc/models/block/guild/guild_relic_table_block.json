@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "gate_enc:block/guild/guild_relic_table_bottom",
+    "east": "gate_enc:block/guild/guild_relic_table_side",
+    "north": "gate_enc:block/guild/guild_relic_table_side",
+    "particle": "minecraft:block/dark_oak_planks",
+    "south": "gate_enc:block/guild/guild_relic_table_side",
+    "up": "gate_enc:block/guild/guild_relic_table_top",
+    "west": "gate_enc:block/guild/guild_relic_table_side"
+  }
+}

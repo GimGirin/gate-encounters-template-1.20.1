@@ -11,7 +11,13 @@
 
   "comment": "GATE ENCOUNTER GUILD RELATED ITEMS",
 
-  "item.gate_enc.guild_coin_anim": "GEA Guild Coin",
+  "item.gate_enc.guild.guild_coin_anim": "GEA Guild Coin",
+
+  "block.gate_enc.guild.guild_reception_desk_block": "Guild Reception Desk",
+  "block.gate_enc.guild.guild_relic_table_block": "Guild Relic Table",
+
+  "entity.minecraft.villager.guild_master": "Guild Master",
+  "entity.minecraft.villager.guild_attendant": "Guild Attendant",
 
   "comment": "ADVENTURER'S SET",
 

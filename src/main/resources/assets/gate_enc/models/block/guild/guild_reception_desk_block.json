@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "down": "gate_enc:block/guild/guild_reception_desk_bottom",
+    "east": "gate_enc:block/guild/guild_reception_desk_east",
+    "north": "gate_enc:block/guild/guild_reception_desk_north",
+    "particle": "minecraft:block/bamboo_planks",
+    "south": "gate_enc:block/guild/guild_reception_desk_south",
+    "up": "gate_enc:block/guild/guild_reception_desk_top",
+    "west": "gate_enc:block/guild/guild_reception_desk_west"
+  }
+}

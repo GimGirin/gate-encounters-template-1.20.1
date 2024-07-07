@@ -5,6 +5,8 @@ import net.fabricmc.api.ModInitializer;
 import net.gim.gate_enc.block.GateEncBlocks;
 import net.gim.gate_enc.item.GateEncItemGroups;
 import net.gim.gate_enc.item.GateEncItems;
+import net.gim.gate_enc.utility.GateEncVillagerTrades;
+import net.gim.gate_enc.villager.GateEncVillagers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -18,5 +20,7 @@ public class GateEncounters implements ModInitializer {
 
 		GateEncItems.registerModItems();
 		GateEncBlocks.registerModBlocks();
+		GateEncVillagers.registerVillagers();
+		GateEncVillagerTrades.registerVillagerTrades();
 	}
 }

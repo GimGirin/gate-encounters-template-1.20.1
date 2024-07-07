@@ -37,6 +37,8 @@ public class GateEncItemGroups {
                         entries.add(GateEncItems.ADVENTURERS_SCALE);
                         entries.add(GateEncItems.ADVENT_PLATE);
                         // Blocks
+                        entries.add(GateEncBlocks.GUILD_RELIC_TABLE_BLOCK);
+                        entries.add(GateEncBlocks.GUILD_RECEPTION_DESK_BLOCK);
 
                     }).build());
 

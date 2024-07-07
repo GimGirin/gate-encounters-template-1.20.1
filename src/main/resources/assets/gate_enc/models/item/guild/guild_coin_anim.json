@@ -1,7 +1,7 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "gate_enc:item/guild_coin_anim"
+		"layer0": "gate_enc:item/guild/guild_coin_anim"
 	},
 	"display": {
 		"thirdperson_righthand": {

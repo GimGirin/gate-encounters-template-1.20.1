@@ -17,7 +17,7 @@ public class GateEncItems {
     // attack speed = 4 + tool attack speed
 
     // GATE ENCOUNTERS ASSOCIATION GUILD ITEMS
-    public static final Item GUILD_COIN = registerItem("guild_coin_anim", new Item(new FabricItemSettings().maxCount(64)));
+    public static final Item GUILD_COIN = registerItem("guild/guild_coin_anim", new Item(new FabricItemSettings().maxCount(64)));
 
 
     // ADVENTURER'S SET ITEMS

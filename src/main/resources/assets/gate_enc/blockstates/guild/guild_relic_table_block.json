@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "gate_enc:block/guild/guild_relic_table_block"
+    }
+  }
+}

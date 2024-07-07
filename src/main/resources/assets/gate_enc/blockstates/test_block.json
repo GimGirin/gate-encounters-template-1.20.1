@@ -1,7 +1,0 @@
-{
-  "variants": {
-    "": {
-      "model": "gate_enc:block/test_block"
-    }
-  }
-}
