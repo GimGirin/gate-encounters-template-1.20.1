@@ -1,0 +1,13 @@
+{
+  "replace": false,
+  "values": [
+    {
+      "id": "gate_enc:guildmasterpoi",
+      "required": false
+    },
+    {
+      "id": "gate_enc:guildattendantpoi",
+      "required": false
+    }
+  ]
+}
