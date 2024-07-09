@@ -1,8 +1,8 @@
 package net.gim.gate_enc.utility;
 
 import net.fabricmc.fabric.api.object.builder.v1.trade.TradeOfferHelper;
-import net.gim.gate_enc.item.GateEncItems;
-import net.gim.gate_enc.villager.GateEncVillagers;
+import net.gim.gate_enc.object.item.GateEncItems;
+import net.gim.gate_enc.entity.villager.GateEncVillagers;
 import net.minecraft.enchantment.EnchantmentLevelEntry;
 import net.minecraft.enchantment.Enchantments;
 import net.minecraft.item.EnchantedBookItem;

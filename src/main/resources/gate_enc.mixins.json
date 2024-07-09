@@ -1,6 +1,6 @@
 {
 	"required": true,
-	"package": "net.gim.gate_enc.mixin",
+	"package": "net.gim.gate_enc.utility.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
 		"ExampleMixin"
