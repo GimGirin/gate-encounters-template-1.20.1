@@ -3,11 +3,15 @@ package net.gim.gate_enc;
 import net.fabricmc.api.ModInitializer;
 
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerWorldEvents;
-import net.gim.gate_enc.object.block.GateEncBlocks;
-import net.gim.gate_enc.object.item.GateEncItemGroups;
-import net.gim.gate_enc.object.item.GateEncItems;
-import net.gim.gate_enc.utility.GateEncVillagerTrades;
-import net.gim.gate_enc.entity.villager.GateEncVillagers;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
+import net.gim.gate_enc.entity.custom.crimson_lycan.CrimsonLycanAlphaEntity;
+import net.gim.gate_enc.registry.EntityRegistry;
+import net.gim.gate_enc.entity.custom.crimson_lycan.CrimsonLycanEntity;
+import net.gim.gate_enc.registry.BlockRegistry;
+import net.gim.gate_enc.registry.ItemGroupRegistry;
+import net.gim.gate_enc.registry.ItemRegistry;
+import net.gim.gate_enc.registry.VillagerTradeRegistry;
+import net.gim.gate_enc.registry.VillagerRegistry;
 import net.gim.gate_enc.world.dimension.CopyEnc00;
 import net.kyrptonaught.customportalapi.api.CustomPortalBuilder;
 import net.minecraft.server.MinecraftServer;
@@ -15,7 +19,6 @@ import net.minecraft.server.world.ServerWorld;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.WorldSavePath;
 import net.minecraft.world.World;
-import net.minecraft.world.storage.RegionFile;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -29,16 +32,22 @@ public class GateEncounters implements ModInitializer {
 
 	@Override
 	public void onInitialize() {
-		GateEncItemGroups.registerItemGroups();
+		ItemGroupRegistry.registerItemGroups();
 
-		GateEncItems.registerModItems();
-		GateEncBlocks.registerModBlocks();
-		GateEncVillagers.registerVillagers();
-		GateEncVillagerTrades.registerVillagerTrades();
+		ItemRegistry.registerModItems();
+		BlockRegistry.registerModBlocks();
+
+		VillagerRegistry.registerVillagers();
+		VillagerTradeRegistry.registerVillagerTrades();
+
+		EntityRegistry.registerEntities();
+
+		FabricDefaultAttributeRegistry.register(EntityRegistry.CRIMSON_LYCAN, CrimsonLycanEntity.createCrimsonLycanAttributes());
+		FabricDefaultAttributeRegistry.register(EntityRegistry.CRIMSON_LYCAN_ALPHA, CrimsonLycanAlphaEntity.createCrimsonLycanAlphaAttributes());
 
 		CustomPortalBuilder.beginPortal()
-				.frameBlock(GateEncBlocks.TEST_BLOCK)
-				.lightWithItem(GateEncItems.TEST_ITEM_ANIM)
+				.frameBlock(BlockRegistry.TEST_BLOCK)
+				.lightWithItem(ItemRegistry.TEST_ITEM_ANIM)
 				.destDimID(new Identifier(GateEncounters.MOD_ID, "encounter_00"))
 				.tintColor(217, 245, 220)
 				.registerPortal();

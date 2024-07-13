@@ -1,4 +1,4 @@
-package net.gim.gate_enc.world.dimension;
+package net.gim.gate_enc.registry;
 
 import net.gim.gate_enc.GateEncounters;
 import net.minecraft.registry.Registerable;
@@ -11,11 +11,10 @@ import net.minecraft.world.World;
 import net.minecraft.world.dimension.DimensionOptions;
 import net.minecraft.world.dimension.DimensionType;
 import net.minecraft.world.dimension.DimensionTypes;
-import net.minecraft.world.dimension.NetherPortal;
 
 import java.util.OptionalLong;
 
-public class GateEncDimensions {
+public class DimensionRegistry {
     public static final RegistryKey<DimensionOptions> ENCOUNTER_00_KEY = RegistryKey.of(RegistryKeys.DIMENSION,
             new Identifier(GateEncounters.MOD_ID, "encounter_00"));
     public static final RegistryKey<World> ENCOUNTER_00_LEVEL_KEY = RegistryKey.of(RegistryKeys.WORLD,

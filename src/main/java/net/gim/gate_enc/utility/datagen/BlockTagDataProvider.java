@@ -7,8 +7,8 @@ import net.minecraft.registry.RegistryWrapper;
 
 import java.util.concurrent.CompletableFuture;
 
-public class GateEncBlockTagProvider extends FabricTagProvider {
-    public GateEncBlockTagProvider(FabricDataOutput output, RegistryKey registryKey, CompletableFuture registriesFuture) {
+public class BlockTagDataProvider extends FabricTagProvider {
+    public BlockTagDataProvider(FabricDataOutput output, RegistryKey registryKey, CompletableFuture registriesFuture) {
         super(output, registryKey, registriesFuture);
     }
 

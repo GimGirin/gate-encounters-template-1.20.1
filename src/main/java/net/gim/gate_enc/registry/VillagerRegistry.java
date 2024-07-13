@@ -1,9 +1,8 @@
-package net.gim.gate_enc.entity.villager;
+package net.gim.gate_enc.registry;
 
 import com.google.common.collect.ImmutableSet;
 import net.fabricmc.fabric.api.object.builder.v1.world.poi.PointOfInterestHelper;
 import net.gim.gate_enc.GateEncounters;
-import net.gim.gate_enc.object.block.GateEncBlocks;
 import net.minecraft.block.Block;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
@@ -14,16 +13,16 @@ import net.minecraft.util.Identifier;
 import net.minecraft.village.VillagerProfession;
 import net.minecraft.world.poi.PointOfInterestType;
 
-public class GateEncVillagers {
+public class VillagerRegistry {
 
     public static final RegistryKey<PointOfInterestType> GUILD_MASTER_POI_KEY = poiKey("guildmasterpoi");
-    public static final PointOfInterestType GUILD_MASTER_POI = registerPoi("guildmasterpoi", GateEncBlocks.GUILD_RELIC_TABLE_BLOCK);
+    public static final PointOfInterestType GUILD_MASTER_POI = registerPoi("guildmasterpoi", BlockRegistry.GUILD_RELIC_TABLE_BLOCK);
 
     public static final VillagerProfession GUILD_MASTER = registerProfession("guild_master", GUILD_MASTER_POI_KEY);
 
 
     public static final RegistryKey<PointOfInterestType> GUILD_ATTENDANT_POI_KEY = poiKey("guildattendantpoi");
-    public static final PointOfInterestType GUILD_ATTENDANT_POI = registerPoi("guildattendantpoi", GateEncBlocks.GUILD_RECEPTION_DESK_BLOCK);
+    public static final PointOfInterestType GUILD_ATTENDANT_POI = registerPoi("guildattendantpoi", BlockRegistry.GUILD_RECEPTION_DESK_BLOCK);
 
     public static final VillagerProfession GUILD_ATTENDANT = registerProfession("guild_attendant", GUILD_ATTENDANT_POI_KEY);
 

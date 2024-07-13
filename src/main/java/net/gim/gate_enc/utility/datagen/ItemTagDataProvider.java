@@ -1,4 +1,4 @@
 package net.gim.gate_enc.utility.datagen;
 
-public class GateEncRecipeProvider {
+public class ItemTagDataProvider {
 }

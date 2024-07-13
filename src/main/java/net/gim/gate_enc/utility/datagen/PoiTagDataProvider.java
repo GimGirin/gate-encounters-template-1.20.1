@@ -11,8 +11,8 @@ import net.minecraft.world.poi.PointOfInterestType;
 
 import java.util.concurrent.CompletableFuture;
 
-public class GateEncPoiTagProvider extends TagProvider<PointOfInterestType> {
-    public GateEncPoiTagProvider(DataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookupFuture) {
+public class PoiTagDataProvider extends TagProvider<PointOfInterestType> {
+    public PoiTagDataProvider(DataOutput output, CompletableFuture<RegistryWrapper.WrapperLookup> registryLookupFuture) {
         super(output, RegistryKeys.POINT_OF_INTEREST_TYPE, registryLookupFuture);
     }
 

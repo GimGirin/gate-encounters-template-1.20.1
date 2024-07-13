@@ -1,15 +1,16 @@
 package net.gim.gate_enc.object.item;
 
+import net.gim.gate_enc.registry.ItemRegistry;
 import net.minecraft.item.ToolMaterial;
 import net.minecraft.recipe.Ingredient;
 
 import java.util.function.Supplier;
 
-public enum GateEncToolMaterial implements ToolMaterial {
+public enum TestToolMaterial implements ToolMaterial {
     // Netherite's miningLevel is 4
     // damage = 1 + tool damage + material damage
     ADVENT(5, 3000, 9f, 5f, 24,
-                 () -> Ingredient.ofItems(GateEncItems.ADVENTURERS_SCALE));
+                 () -> Ingredient.ofItems(ItemRegistry.ADVENTURERS_SCALE));
 
     private final int miningLevel;
     private final int itemDurability;
@@ -18,7 +19,7 @@ public enum GateEncToolMaterial implements ToolMaterial {
     private final int enchantability;
     private final Supplier<Ingredient> repairIngredient;
 
-    GateEncToolMaterial(int miningLevel, int itemDurability, float miningSpeed, float attckDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
+    TestToolMaterial(int miningLevel, int itemDurability, float miningSpeed, float attckDamage, int enchantability, Supplier<Ingredient> repairIngredient) {
         this.miningLevel = miningLevel;
         this.itemDurability = itemDurability;
         this.miningSpeed = miningSpeed;

@@ -22,7 +22,7 @@
 			"net.gim.gate_enc.GateEncountersClient"
 		],
 		"fabric-datagen": [
-			"net.gim.gate_enc.GateEncountersDataGenerator"
+          "net.gim.gate_enc.utility.GateEncountersDataGenerator"
 		]
 	},
 	"mixins": [

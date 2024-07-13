@@ -1,4 +1,4 @@
-package net.gim.gate_enc.object.block;
+package net.gim.gate_enc.registry;
 
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -12,7 +12,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.sound.BlockSoundGroup;
 import net.minecraft.util.Identifier;
 
-public class GateEncBlocks {
+public class BlockRegistry {
 
     public static final Block TEST_BLOCK = registerBlock("test/test_block",
             new Block(FabricBlockSettings.copyOf(Blocks.IRON_BLOCK).strength(5.0F, 6.0F)));

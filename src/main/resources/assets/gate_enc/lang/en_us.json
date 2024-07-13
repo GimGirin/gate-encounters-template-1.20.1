@@ -19,6 +19,14 @@
   "entity.minecraft.villager.guild_master": "Guild Master",
   "entity.minecraft.villager.guild_attendant": "Guild Attendant",
 
+  "comment": "ENCOUNTER_00: CRIMSON LYCAN GATE",
+
+  "entity.gate_enc.crimson_lycan": "Crimson Lycan",
+  "entity.gate_enc.crimson_lycan_a": "Crimson Lycan Alpha",
+
+  "item.gate_enc.encounters.crimson_lycan_spawn_egg": "Crimson Lycan Spawn Egg",
+  "item.gate_enc.encounters.crimson_lycan_a_spawn_egg": "Crimson Lycan Alpha Spawn Egg",
+
   "comment": "ADVENTURER'S SET",
 
   "item.gate_enc.advent.adventurers_scale_anim": "Adventurer's Scale",
