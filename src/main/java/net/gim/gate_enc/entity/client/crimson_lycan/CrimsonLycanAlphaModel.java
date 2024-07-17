@@ -11,10 +11,9 @@ import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.math.MathHelper;
 
-// Made with Blockbench 4.10.4
-// Exported for Minecraft version 1.17+ for Yarn
-// Paste this class into your mod and generate all required imports
 public class CrimsonLycanAlphaModel<T extends CrimsonLycanEntity> extends SinglePartEntityModel<T> {
+
+	private final ModelPart crimson_lycan_model;
 	private final ModelPart crimson_lycan_a;
 	private final ModelPart upper_body;
 	private final ModelPart head;
@@ -65,104 +64,108 @@ public class CrimsonLycanAlphaModel<T extends CrimsonLycanEntity> extends Single
 	private final ModelPart tail_section2;
 	private final ModelPart tail_section3;
 	private final ModelPart scimitar;
+
 	public CrimsonLycanAlphaModel(ModelPart root) {
 
-		this.crimson_lycan_a = root.getChild("crimson_lycan_a");
-		this.upper_body = crimson_lycan_a.getChild("upper_body");
-		this.head = crimson_lycan_a.getChild("upper_body").getChild("head");
-		this.neck = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.crimson_lycan_model = root.getChild("crimson_lycan");
+		this.crimson_lycan_a = this.crimson_lycan_model.getChild("crimson_lycan_a");
+		this.upper_body = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body");
+		this.head = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head");
+		this.neck = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("neck");
-		this.head_sections = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.head_sections = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("head_sections");
-		this.back_head = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.back_head = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("head_sections").getChild("back_head");
-		this.ears = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.ears = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("head_sections").getChild("back_head").getChild("ears");
-		this.front_head = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.front_head = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("head_sections").getChild("front_head");
-		this.jaws = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.jaws = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("head_sections").getChild("front_head").getChild("jaws");
-		this.top_jaw = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.top_jaw = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("head_sections").getChild("front_head").getChild("jaws").getChild("top_jaw");
-		this.bottom_jaw = crimson_lycan_a.getChild("upper_body").getChild("head")
+		this.bottom_jaw = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("head")
 				.getChild("head_sections").getChild("front_head").getChild("jaws").getChild("bottom_jaw");
-		this.fore_legs = crimson_lycan_a.getChild("upper_body").getChild("fore_legs");
-		this.right_fore_leg = crimson_lycan_a.getChild("upper_body").getChild("fore_legs")
+		this.fore_legs = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs");
+		this.right_fore_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs")
 				.getChild("right_fore_leg");
-		this.right_fore_hip = crimson_lycan_a.getChild("upper_body").getChild("fore_legs")
+		this.right_fore_hip = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs")
 				.getChild("right_fore_leg").getChild("right_fore_hip");
-		this.right_lower_fore_leg = crimson_lycan_a.getChild("upper_body").getChild("fore_legs")
+		this.right_lower_fore_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs")
 				.getChild("right_fore_leg").getChild("right_lower_fore_leg");
-		this.right_fore_thigh = crimson_lycan_a.getChild("upper_body").getChild("fore_legs")
+		this.right_fore_thigh = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs")
 				.getChild("right_fore_leg").getChild("right_lower_fore_leg").getChild("right_fore_thigh");
-		this.right_lowest_fore_leg = crimson_lycan_a.getChild("upper_body").getChild("fore_legs")
+		this.right_lowest_fore_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs")
 				.getChild("right_fore_leg").getChild("right_lower_fore_leg").getChild("right_lowest_fore_leg");
-		this.right_fore_ankle = crimson_lycan_a.getChild("upper_body").getChild("fore_legs")
+		this.right_fore_ankle = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs")
 				.getChild("right_fore_leg").getChild("right_lower_fore_leg").getChild("right_lowest_fore_leg").getChild("right_fore_ankle");
-		this.right_fore_paw = crimson_lycan_a.getChild("upper_body").getChild("fore_legs")
+		this.right_fore_paw = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs")
 				.getChild("right_fore_leg").getChild("right_lower_fore_leg").getChild("right_lowest_fore_leg").getChild("right_fore_paw");
-		this.left_fore_leg = crimson_lycan_a.getChild("upper_body").getChild("fore_legs").
+		this.left_fore_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs").
 				getChild("left_fore_leg");
-		this.left_fore_hip = crimson_lycan_a.getChild("upper_body").getChild("fore_legs").
+		this.left_fore_hip = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs").
 				getChild("left_fore_leg").getChild("left_fore_hip");
-		this.left_lower_fore_leg = crimson_lycan_a.getChild("upper_body").getChild("fore_legs").
+		this.left_lower_fore_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs").
 				getChild("left_fore_leg").getChild("left_lower_fore_leg");
-		this.left_fore_thigh = crimson_lycan_a.getChild("upper_body").getChild("fore_legs").
+		this.left_fore_thigh = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs").
 				getChild("left_fore_leg").getChild("left_lower_fore_leg").getChild("left_fore_thigh");
-		this.left_lowest_fore_leg = crimson_lycan_a.getChild("upper_body").getChild("fore_legs").
+		this.left_lowest_fore_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs").
 				getChild("left_fore_leg").getChild("left_lower_fore_leg").getChild("left_lowest_fore_leg");
-		this.left_fore_ankle = crimson_lycan_a.getChild("upper_body").getChild("fore_legs").
+		this.left_fore_ankle = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs").
 				getChild("left_fore_leg").getChild("left_lower_fore_leg").getChild("left_lowest_fore_leg").getChild("left_fore_ankle");
-		this.left_fore_paw = crimson_lycan_a.getChild("upper_body").getChild("fore_legs").
+		this.left_fore_paw = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("fore_legs").
 				getChild("left_fore_leg").getChild("left_lower_fore_leg").getChild("left_lowest_fore_leg").getChild("left_fore_paw");
-		this.upper_torso = crimson_lycan_a.getChild("upper_body").getChild("upper_torso");
-		this.lower_body = crimson_lycan_a.getChild("lower_body");
-		this.lower_torso = crimson_lycan_a.getChild("lower_body").getChild("lower_torso");
-		this.hind_legs = crimson_lycan_a.getChild("lower_body").getChild("hind_legs");
-		this.right_hind_leg = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.upper_torso = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("upper_body").getChild("upper_torso");
+		this.lower_body = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body");
+		this.lower_torso = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("lower_torso");
+		this.hind_legs = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs");
+		this.right_hind_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("right_hind_leg");
-		this.right_hind_hip = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.right_hind_hip = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("right_hind_leg").getChild("right_hind_hip");
-		this.right_lower_hind_leg = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.right_lower_hind_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("right_hind_leg").getChild("right_lower_hind_leg");
-		this.right_hind_thigh = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.right_hind_thigh = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("right_hind_leg").getChild("right_lower_hind_leg").getChild("right_hind_thigh");
-		this.right_hind_lowest_leg = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.right_hind_lowest_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("right_hind_leg").getChild("right_lower_hind_leg").getChild("right_hind_lowest_leg");
-		this.right_hind_ankle = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.right_hind_ankle = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("right_hind_leg").getChild("right_lower_hind_leg").getChild("right_hind_lowest_leg").getChild("right_hind_ankle");
-		this.right_hind_paw = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.right_hind_paw = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("right_hind_leg").getChild("right_lower_hind_leg").getChild("right_hind_lowest_leg").getChild("right_hind_paw");
-		this.left_hind_leg = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.left_hind_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("left_hind_leg");
-		this.left_hind_hip = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.left_hind_hip = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("left_hind_leg").getChild("left_hind_hip");
-		this.left_hind_lower_leg = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.left_hind_lower_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("left_hind_leg").getChild("left_hind_lower_leg");
-		this.left_hind_thigh = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.left_hind_thigh = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("left_hind_leg").getChild("left_hind_lower_leg").getChild("left_hind_thigh");
-		this.left_hind_lowest_leg = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.left_hind_lowest_leg = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("left_hind_leg").getChild("left_hind_lower_leg").getChild("left_hind_lowest_leg");
-		this.left_hind_ankle = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.left_hind_ankle = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("left_hind_leg").getChild("left_hind_lower_leg").getChild("left_hind_lowest_leg").getChild("left_hind_ankle");
-		this.left_hind_paw = crimson_lycan_a.getChild("lower_body").getChild("hind_legs")
+		this.left_hind_paw = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("hind_legs")
 				.getChild("left_hind_leg").getChild("left_hind_lower_leg").getChild("left_hind_lowest_leg").getChild("left_hind_paw");
-		this.tail = crimson_lycan_a.getChild("lower_body").getChild("tail");
-		this.tail_section1 = crimson_lycan_a.getChild("lower_body").getChild("tail")
+		this.tail = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("tail");
+		this.tail_section1 = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("tail")
 				.getChild("tail_section1");
-		this.tail_subsection1 = crimson_lycan_a.getChild("lower_body").getChild("tail").
+		this.tail_subsection1 = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("tail").
 				getChild("tail_subsection1");
-		this.tail_section2 = crimson_lycan_a.getChild("lower_body").getChild("tail").
+		this.tail_section2 = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("tail").
 				getChild("tail_subsection1").getChild("tail_section2");
-		this.tail_section3 = crimson_lycan_a.getChild("lower_body").getChild("tail").
+		this.tail_section3 = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("tail").
 				getChild("tail_subsection1").getChild("tail_section3");
-		this.scimitar = crimson_lycan_a.getChild("lower_body").getChild("tail").
+		this.scimitar = this.crimson_lycan_model.getChild("crimson_lycan_a").getChild("lower_body").getChild("tail").
 				getChild("tail_subsection1").getChild("tail_section3").getChild("scimitar");
 	}
 	public static TexturedModelData getTexturedModelData() {
 		ModelData modelData = new ModelData();
 		ModelPartData modelPartData = modelData.getRoot();
-		ModelPartData crimson_lycan_a = modelPartData.addChild("crimson_lycan_a", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 14.5F, 0.0F));
+		ModelPartData crimson_lycan = modelPartData.addChild("crimson_lycan", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 24.0F, 0.0F));
+
+		ModelPartData crimson_lycan_a = crimson_lycan.addChild("crimson_lycan_a", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -9.5F, 0.0F));
 
 		ModelPartData upper_body = crimson_lycan_a.addChild("upper_body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
@@ -177,10 +180,10 @@ public class CrimsonLycanAlphaModel<T extends CrimsonLycanEntity> extends Single
 		ModelPartData ears = back_head.addChild("ears", ModelPartBuilder.create(), ModelTransform.of(0.0F, -1.6906F, -0.4163F, -0.0873F, 0.0F, 0.0F));
 
 		ModelPartData right_ear_tip_r1 = ears.addChild("right_ear_tip_r1", ModelPartBuilder.create().uv(7, 7).cuboid(-0.25F, -2.25F, -0.75F, 0.5F, 2.5F, 1.25F, new Dilation(0.0F))
-		.uv(25, 16).cuboid(4.25F, -2.25F, -0.75F, 0.5F, 2.5F, 1.25F, new Dilation(0.0F)), ModelTransform.of(-2.25F, -1.2594F, 0.1163F, -0.2618F, 0.0F, 0.0F));
+				.uv(25, 16).cuboid(4.25F, -2.25F, -0.75F, 0.5F, 2.5F, 1.25F, new Dilation(0.0F)), ModelTransform.of(-2.25F, -1.2594F, 0.1163F, -0.2618F, 0.0F, 0.0F));
 
 		ModelPartData right_ear_base_r1 = ears.addChild("right_ear_base_r1", ModelPartBuilder.create().uv(0, 43).cuboid(-0.5F, -1.0F, -0.75F, 1.0F, 2.25F, 1.75F, new Dilation(0.0F))
-		.uv(6, 43).cuboid(4.0F, -1.0F, -0.75F, 1.0F, 2.25F, 1.75F, new Dilation(0.0F)), ModelTransform.of(-2.25F, -1.2594F, -0.3837F, -0.2618F, 0.0F, 0.0F));
+				.uv(6, 43).cuboid(4.0F, -1.0F, -0.75F, 1.0F, 2.25F, 1.75F, new Dilation(0.0F)), ModelTransform.of(-2.25F, -1.2594F, -0.3837F, -0.2618F, 0.0F, 0.0F));
 
 		ModelPartData front_head = head_sections.addChild("front_head", ModelPartBuilder.create().uv(0, 48).cuboid(-2.0F, -1.75F, -5.0F, 4.0F, 3.5F, 2.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.25F, 0.0F));
 
@@ -189,7 +192,7 @@ public class CrimsonLycanAlphaModel<T extends CrimsonLycanEntity> extends Single
 		ModelPartData top_jaw = jaws.addChild("top_jaw", ModelPartBuilder.create().uv(0, 54).cuboid(-1.25F, -0.25F, -2.5F, 2.5F, 1.0F, 3.5F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -0.5F, 0.0F));
 
 		ModelPartData bottom_jaw = jaws.addChild("bottom_jaw", ModelPartBuilder.create().uv(1, 59).cuboid(-1.0F, 0.5F, -2.75F, 2.0F, 1.0F, 3.25F, new Dilation(0.0F))
-		.uv(-3, 64).cuboid(-1.0F, 1.5F, -2.75F, 2.0F, 0.0F, 3.25F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -0.25F, 0.5F));
+				.uv(-3, 64).cuboid(-1.0F, 1.5F, -2.75F, 2.0F, 0.0F, 3.25F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, -0.25F, 0.5F));
 
 		ModelPartData fore_legs = upper_body.addChild("fore_legs", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, -1.5F, -6.75F));
 
@@ -234,8 +237,8 @@ public class CrimsonLycanAlphaModel<T extends CrimsonLycanEntity> extends Single
 		ModelPartData left_fore_paw_r1 = left_fore_paw.addChild("left_fore_paw_r1", ModelPartBuilder.create().uv(17, 80).cuboid(-4.0F, 0.5F, 0.5F, 2.0F, 1.0F, 5.0F, new Dilation(0.0F)), ModelTransform.of(3.0F, -1.5058F, -4.0308F, -0.1745F, 0.0F, 0.0F));
 
 		ModelPartData upper_torso = upper_body.addChild("upper_torso", ModelPartBuilder.create().uv(0, 16).cuboid(-4.0F, -5.0F, -8.0F, 8.0F, 6.25F, 9.0F, new Dilation(0.0F))
-		.uv(40, 22).cuboid(-4.0F, -5.0F, 1.0F, 8.0F, 6.25F, 0.25F, new Dilation(0.0F))
-		.uv(23, 0).cuboid(-3.0F, -6.0F, -7.0F, 6.0F, 4.25F, 7.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
+				.uv(40, 22).cuboid(-4.0F, -5.0F, 1.0F, 8.0F, 6.25F, 0.25F, new Dilation(0.0F))
+				.uv(23, 0).cuboid(-3.0F, -6.0F, -7.0F, 6.0F, 4.25F, 7.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
 		ModelPartData lower_body = crimson_lycan_a.addChild("lower_body", ModelPartBuilder.create(), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
@@ -292,49 +295,49 @@ public class CrimsonLycanAlphaModel<T extends CrimsonLycanEntity> extends Single
 		ModelPartData tail_section2 = tail_subsection1.addChild("tail_section2", ModelPartBuilder.create().uv(40, 32).cuboid(-1.0F, -1.5F, 0.0F, 2.0F, 3.0F, 5.0F, new Dilation(0.0F)), ModelTransform.pivot(0.0F, 0.0F, 0.0F));
 
 		ModelPartData tail_section3 = tail_subsection1.addChild("tail_section3", ModelPartBuilder.create().uv(16, 59).cuboid(-1.25F, -1.75F, 0.0F, 2.5F, 3.5F, 5.0F, new Dilation(0.0F))
-		.uv(13, 59).cuboid(-0.75F, -1.25F, 4.0F, 1.5F, 2.5F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 4.0F, 0.3491F, 0.0F, 0.0F));
+				.uv(13, 59).cuboid(-0.75F, -1.25F, 4.0F, 1.5F, 2.5F, 2.0F, new Dilation(0.0F)), ModelTransform.of(0.0F, 0.0F, 4.0F, 0.3491F, 0.0F, 0.0F));
 
 		ModelPartData scimitar = tail_section3.addChild("scimitar", ModelPartBuilder.create(), ModelTransform.of(0.0625F, -1.453F, 8.7026F, -0.3491F, 0.0F, 0.0F));
 
 		ModelPartData scimitar_112_r1 = scimitar.addChild("scimitar_112_r1", ModelPartBuilder.create().uv(90, 0).cuboid(7.5938F, 6.8438F, -0.0625F, 0.25F, 0.125F, 0.125F, new Dilation(0.0F))
-		.uv(90, 0).cuboid(7.4688F, 6.7188F, -0.0625F, 0.25F, 0.125F, 0.125F, new Dilation(0.0F))
-		.uv(95, 0).cuboid(7.3438F, 6.3438F, -0.0625F, 0.25F, 0.375F, 0.125F, new Dilation(0.0F))
-		.uv(96, 0).cuboid(7.2188F, 6.0938F, -0.0625F, 0.125F, 0.625F, 0.125F, new Dilation(0.0F))
-		.uv(97, 0).cuboid(7.0938F, 5.9688F, -0.0625F, 0.125F, 0.625F, 0.125F, new Dilation(0.0F))
-		.uv(98, 0).cuboid(6.8438F, 5.7188F, -0.0625F, 0.25F, 0.75F, 0.125F, new Dilation(0.0F))
-		.uv(99, 0).cuboid(6.5938F, 5.3438F, -0.0625F, 0.25F, 1.0F, 0.125F, new Dilation(0.0F))
-		.uv(91, 0).cuboid(4.9688F, 5.0938F, -0.0625F, 0.125F, 0.125F, 0.125F, new Dilation(0.0F))
-		.uv(100, 0).cuboid(6.4688F, 5.0938F, -0.0625F, 0.125F, 1.0F, 0.125F, new Dilation(0.0F))
-		.uv(101, 0).cuboid(6.3438F, 4.9688F, -0.0625F, 0.125F, 1.125F, 0.125F, new Dilation(0.0F))
-		.uv(102, 0).cuboid(6.2188F, 4.7188F, -0.0625F, 0.125F, 1.25F, 0.125F, new Dilation(0.0F))
-		.uv(92, 0).cuboid(3.3438F, 4.4688F, -0.0625F, 0.125F, 0.125F, 0.125F, new Dilation(0.0F))
-		.uv(103, 0).cuboid(6.0938F, 4.4688F, -0.0625F, 0.125F, 1.375F, 0.125F, new Dilation(0.0F))
-		.uv(104, 0).cuboid(5.9688F, 4.3438F, -0.0625F, 0.125F, 1.375F, 0.125F, new Dilation(0.0F))
-		.uv(105, 0).cuboid(5.8438F, 4.2188F, -0.0625F, 0.125F, 1.5F, 0.125F, new Dilation(0.0F))
-		.uv(93, 0).cuboid(2.9688F, 4.0938F, -0.0625F, 0.125F, 0.25F, 0.125F, new Dilation(0.0F))
-		.uv(106, 0).cuboid(5.7188F, 3.9688F, -0.0625F, 0.125F, 1.75F, 0.125F, new Dilation(0.0F))
-		.uv(107, 0).cuboid(5.5938F, 3.8438F, -0.0625F, 0.125F, 1.75F, 0.125F, new Dilation(0.0F))
-		.uv(108, 0).cuboid(5.4688F, 3.7188F, -0.0625F, 0.125F, 1.75F, 0.125F, new Dilation(0.0F))
-		.uv(109, 0).cuboid(5.3438F, 3.4688F, -0.0625F, 0.125F, 1.875F, 0.125F, new Dilation(0.0F))
-		.uv(94, 0).cuboid(2.5938F, 3.3438F, -0.0625F, 0.125F, 0.25F, 0.125F, new Dilation(0.0F))
-		.uv(110, 0).cuboid(5.2188F, 3.3438F, -0.0625F, 0.125F, 2.0F, 0.125F, new Dilation(0.0F))
-		.uv(111, 0).cuboid(5.0938F, 3.2188F, -0.0625F, 0.125F, 2.0F, 0.125F, new Dilation(0.0F))
-		.uv(112, 0).cuboid(4.8438F, 2.9688F, -0.0625F, 0.25F, 2.125F, 0.125F, new Dilation(0.0F))
-		.uv(113, 0).cuboid(4.5938F, 2.7188F, -0.0625F, 0.25F, 2.375F, 0.125F, new Dilation(0.0F))
-		.uv(114, 0).cuboid(4.4688F, 2.5938F, -0.0625F, 0.125F, 2.375F, 0.125F, new Dilation(0.0F))
-		.uv(115, 0).cuboid(4.3438F, 2.3438F, -0.0625F, 0.125F, 2.5F, 0.125F, new Dilation(0.0F))
-		.uv(116, 0).cuboid(4.2188F, 2.2188F, -0.0625F, 0.125F, 2.625F, 0.125F, new Dilation(0.0F))
-		.uv(117, 0).cuboid(3.9688F, 1.9688F, -0.0625F, 0.25F, 2.75F, 0.125F, new Dilation(0.0F))
-		.uv(118, 0).cuboid(3.8438F, 1.8438F, -0.0625F, 0.125F, 2.875F, 0.125F, new Dilation(0.0F))
-		.uv(119, 0).cuboid(3.5938F, 1.5938F, -0.0625F, 0.25F, 3.125F, 0.125F, new Dilation(0.0F))
-		.uv(120, 0).cuboid(3.4688F, 1.4688F, -0.0625F, 0.125F, 3.125F, 0.125F, new Dilation(0.0F))
-		.uv(121, 0).cuboid(3.2188F, 1.3438F, -0.0625F, 0.25F, 3.125F, 0.125F, new Dilation(0.0F))
-		.uv(122, 0).cuboid(3.0938F, 1.0938F, -0.0625F, 0.125F, 3.25F, 0.125F, new Dilation(0.0F))
-		.uv(123, 0).cuboid(2.8438F, 0.9688F, -0.0625F, 0.25F, 3.125F, 0.125F, new Dilation(0.0F))
-		.uv(124, 0).cuboid(2.7188F, 0.7188F, -0.0625F, 0.125F, 3.0F, 0.125F, new Dilation(0.0F))
-		.uv(125, 0).cuboid(2.4688F, 1.3438F, -0.0625F, 0.25F, 2.0F, 0.125F, new Dilation(0.0F))
-		.uv(126, 0).cuboid(2.3438F, 1.0938F, -0.0625F, 0.125F, 2.0F, 0.125F, new Dilation(0.0F))
-		.uv(127, 0).cuboid(2.2188F, 0.3438F, -0.0625F, 0.125F, 2.625F, 0.125F, new Dilation(0.0F)), ModelTransform.of(0.0F, 4.3181F, -4.9447F, 0.0F, -1.5708F, -3.1416F));
+				.uv(90, 0).cuboid(7.4688F, 6.7188F, -0.0625F, 0.25F, 0.125F, 0.125F, new Dilation(0.0F))
+				.uv(95, 0).cuboid(7.3438F, 6.3438F, -0.0625F, 0.25F, 0.375F, 0.125F, new Dilation(0.0F))
+				.uv(96, 0).cuboid(7.2188F, 6.0938F, -0.0625F, 0.125F, 0.625F, 0.125F, new Dilation(0.0F))
+				.uv(97, 0).cuboid(7.0938F, 5.9688F, -0.0625F, 0.125F, 0.625F, 0.125F, new Dilation(0.0F))
+				.uv(98, 0).cuboid(6.8438F, 5.7188F, -0.0625F, 0.25F, 0.75F, 0.125F, new Dilation(0.0F))
+				.uv(99, 0).cuboid(6.5938F, 5.3438F, -0.0625F, 0.25F, 1.0F, 0.125F, new Dilation(0.0F))
+				.uv(91, 0).cuboid(4.9688F, 5.0938F, -0.0625F, 0.125F, 0.125F, 0.125F, new Dilation(0.0F))
+				.uv(100, 0).cuboid(6.4688F, 5.0938F, -0.0625F, 0.125F, 1.0F, 0.125F, new Dilation(0.0F))
+				.uv(101, 0).cuboid(6.3438F, 4.9688F, -0.0625F, 0.125F, 1.125F, 0.125F, new Dilation(0.0F))
+				.uv(102, 0).cuboid(6.2188F, 4.7188F, -0.0625F, 0.125F, 1.25F, 0.125F, new Dilation(0.0F))
+				.uv(92, 0).cuboid(3.3438F, 4.4688F, -0.0625F, 0.125F, 0.125F, 0.125F, new Dilation(0.0F))
+				.uv(103, 0).cuboid(6.0938F, 4.4688F, -0.0625F, 0.125F, 1.375F, 0.125F, new Dilation(0.0F))
+				.uv(104, 0).cuboid(5.9688F, 4.3438F, -0.0625F, 0.125F, 1.375F, 0.125F, new Dilation(0.0F))
+				.uv(105, 0).cuboid(5.8438F, 4.2188F, -0.0625F, 0.125F, 1.5F, 0.125F, new Dilation(0.0F))
+				.uv(93, 0).cuboid(2.9688F, 4.0938F, -0.0625F, 0.125F, 0.25F, 0.125F, new Dilation(0.0F))
+				.uv(106, 0).cuboid(5.7188F, 3.9688F, -0.0625F, 0.125F, 1.75F, 0.125F, new Dilation(0.0F))
+				.uv(107, 0).cuboid(5.5938F, 3.8438F, -0.0625F, 0.125F, 1.75F, 0.125F, new Dilation(0.0F))
+				.uv(108, 0).cuboid(5.4688F, 3.7188F, -0.0625F, 0.125F, 1.75F, 0.125F, new Dilation(0.0F))
+				.uv(109, 0).cuboid(5.3438F, 3.4688F, -0.0625F, 0.125F, 1.875F, 0.125F, new Dilation(0.0F))
+				.uv(94, 0).cuboid(2.5938F, 3.3438F, -0.0625F, 0.125F, 0.25F, 0.125F, new Dilation(0.0F))
+				.uv(110, 0).cuboid(5.2188F, 3.3438F, -0.0625F, 0.125F, 2.0F, 0.125F, new Dilation(0.0F))
+				.uv(111, 0).cuboid(5.0938F, 3.2188F, -0.0625F, 0.125F, 2.0F, 0.125F, new Dilation(0.0F))
+				.uv(112, 0).cuboid(4.8438F, 2.9688F, -0.0625F, 0.25F, 2.125F, 0.125F, new Dilation(0.0F))
+				.uv(113, 0).cuboid(4.5938F, 2.7188F, -0.0625F, 0.25F, 2.375F, 0.125F, new Dilation(0.0F))
+				.uv(114, 0).cuboid(4.4688F, 2.5938F, -0.0625F, 0.125F, 2.375F, 0.125F, new Dilation(0.0F))
+				.uv(115, 0).cuboid(4.3438F, 2.3438F, -0.0625F, 0.125F, 2.5F, 0.125F, new Dilation(0.0F))
+				.uv(116, 0).cuboid(4.2188F, 2.2188F, -0.0625F, 0.125F, 2.625F, 0.125F, new Dilation(0.0F))
+				.uv(117, 0).cuboid(3.9688F, 1.9688F, -0.0625F, 0.25F, 2.75F, 0.125F, new Dilation(0.0F))
+				.uv(118, 0).cuboid(3.8438F, 1.8438F, -0.0625F, 0.125F, 2.875F, 0.125F, new Dilation(0.0F))
+				.uv(119, 0).cuboid(3.5938F, 1.5938F, -0.0625F, 0.25F, 3.125F, 0.125F, new Dilation(0.0F))
+				.uv(120, 0).cuboid(3.4688F, 1.4688F, -0.0625F, 0.125F, 3.125F, 0.125F, new Dilation(0.0F))
+				.uv(121, 0).cuboid(3.2188F, 1.3438F, -0.0625F, 0.25F, 3.125F, 0.125F, new Dilation(0.0F))
+				.uv(122, 0).cuboid(3.0938F, 1.0938F, -0.0625F, 0.125F, 3.25F, 0.125F, new Dilation(0.0F))
+				.uv(123, 0).cuboid(2.8438F, 0.9688F, -0.0625F, 0.25F, 3.125F, 0.125F, new Dilation(0.0F))
+				.uv(124, 0).cuboid(2.7188F, 0.7188F, -0.0625F, 0.125F, 3.0F, 0.125F, new Dilation(0.0F))
+				.uv(125, 0).cuboid(2.4688F, 1.3438F, -0.0625F, 0.25F, 2.0F, 0.125F, new Dilation(0.0F))
+				.uv(126, 0).cuboid(2.3438F, 1.0938F, -0.0625F, 0.125F, 2.0F, 0.125F, new Dilation(0.0F))
+				.uv(127, 0).cuboid(2.2188F, 0.3438F, -0.0625F, 0.125F, 2.625F, 0.125F, new Dilation(0.0F)), ModelTransform.of(0.0F, 4.3181F, -4.9447F, 0.0F, -1.5708F, -3.1416F));
 		return TexturedModelData.of(modelData, 128, 128);
 	}
 	@Override
@@ -357,11 +360,11 @@ public class CrimsonLycanAlphaModel<T extends CrimsonLycanEntity> extends Single
 
 	@Override
 	public void render(MatrixStack matrices, VertexConsumer vertexConsumer, int light, int overlay, float red, float green, float blue, float alpha) {
-		crimson_lycan_a.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
+		crimson_lycan_model.render(matrices, vertexConsumer, light, overlay, red, green, blue, alpha);
 	}
 
 	@Override
 	public ModelPart getPart() {
-		return crimson_lycan_a;
+		return crimson_lycan_model;
 	}
 }

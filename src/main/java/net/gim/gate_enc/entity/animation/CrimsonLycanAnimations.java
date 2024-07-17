@@ -1,15 +1,10 @@
-package net.gim.gate_enc.entity.animation;// Save this class in your mod and generate all required imports
+package net.gim.gate_enc.entity.animation;
 
 import net.minecraft.client.render.entity.animation.Animation;
 import net.minecraft.client.render.entity.animation.AnimationHelper;
 import net.minecraft.client.render.entity.animation.Keyframe;
 import net.minecraft.client.render.entity.animation.Transformation;
 
-/**
- * Made with Blockbench 4.10.4
- * Exported for Minecraft version 1.19 or later with Yarn mappings
- * @author Author
- */
 public class CrimsonLycanAnimations {
 	public static final Animation CRIMSON_LYCAN_MELEE = Animation.Builder.create(1.125F)
 		.addBoneAnimation("crimson_lycan", new Transformation(Transformation.Targets.ROTATE,

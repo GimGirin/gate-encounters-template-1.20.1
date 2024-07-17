@@ -37,6 +37,8 @@ public class ItemGroupRegistry {
                         entries.add(ItemRegistry.ADVENT_PLATE);
                         entries.add(ItemRegistry.CRIMSON_LYCAN_SPAWN_EGG);
                         entries.add(ItemRegistry.CRIMSON_LYCAN_ALPHA_SPAWN_EGG);
+                        entries.add(ItemRegistry.CRIMSON_LYCAN_BETA_SPAWN_EGG);
+                        entries.add(ItemRegistry.CRIMSON_LYCAN_GAMMA_SPAWN_EGG);
                         // Blocks
                         entries.add(BlockRegistry.GUILD_RELIC_TABLE_BLOCK);
                         entries.add(BlockRegistry.GUILD_RECEPTION_DESK_BLOCK);

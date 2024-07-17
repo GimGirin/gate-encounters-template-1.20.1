@@ -23,9 +23,13 @@
 
   "entity.gate_enc.crimson_lycan": "Crimson Lycan",
   "entity.gate_enc.crimson_lycan_a": "Crimson Lycan Alpha",
+  "entity.gate_enc.crimson_lycan_b": "Crimson Lycan Beta",
+  "entity.gate_enc.crimson_lycan_g": "Crimson Lycan Gamma",
 
   "item.gate_enc.encounters.crimson_lycan_spawn_egg": "Crimson Lycan Spawn Egg",
   "item.gate_enc.encounters.crimson_lycan_a_spawn_egg": "Crimson Lycan Alpha Spawn Egg",
+  "item.gate_enc.encounters.crimson_lycan_b_spawn_egg": "Crimson Lycan Beta Spawn Egg",
+  "item.gate_enc.encounters.crimson_lycan_g_spawn_egg": "Crimson Lycan Gamma Spawn Egg",
 
   "comment": "ADVENTURER'S SET",
 

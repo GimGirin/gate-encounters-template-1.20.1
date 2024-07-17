@@ -75,8 +75,11 @@ public class CrimsonLycanEntity extends HostileEntity {
         this.goalSelector.add(0, new SwimGoal(this));
 
         this.goalSelector.add(1, new MeleeAttackGoal(this, 1.0, true));
+        this.goalSelector.add(2, new WanderAroundFarGoal(this, 0.8));
+        this.goalSelector.add(3, new LookAtEntityGoal(this, PlayerEntity.class, 8.0F));
+        this.goalSelector.add(4, new LookAroundGoal(this));
 
-        this.targetSelector.add(1, new RevengeGoal(this));
+        this.targetSelector.add(0, new RevengeGoal(this));
         this.targetSelector.add(1, new ActiveTargetGoal<>(this, PlayerEntity.class, true));
         this.targetSelector.add(2, new ActiveTargetGoal<>(this, MerchantEntity.class, false));
         this.targetSelector.add(3, new ActiveTargetGoal<>(this, IronGolemEntity.class, true));
@@ -88,7 +91,7 @@ public class CrimsonLycanEntity extends HostileEntity {
                 .add(EntityAttributes.GENERIC_ATTACK_DAMAGE, 14)
                 .add(EntityAttributes.GENERIC_MOVEMENT_SPEED, 0.28F)
                 .add(EntityAttributes.GENERIC_ARMOR, 0.3F)
-                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 12.0F);
+                .add(EntityAttributes.GENERIC_FOLLOW_RANGE, 34.0F);
     }
 
     public void setAttacking(boolean attacking) {

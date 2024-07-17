@@ -23,10 +23,16 @@ public class ItemRegistry {
 
     // ENCOUNTER_00: CRIMSON LYCAN GATE ITEMS
     public static final Item CRIMSON_LYCAN_SPAWN_EGG = registerItem("encounters/crimson_lycan_spawn_egg",
-            new SpawnEggItem(EntityRegistry.CRIMSON_LYCAN, 4, 0, new FabricItemSettings()));
+            new SpawnEggItem(EntityRegistry.CRIMSON_LYCAN, 1, 0, new FabricItemSettings()));
 
     public static final Item CRIMSON_LYCAN_ALPHA_SPAWN_EGG = registerItem("encounters/crimson_lycan_a_spawn_egg",
-            new SpawnEggItem(EntityRegistry.CRIMSON_LYCAN_ALPHA, 4, 0, new FabricItemSettings()));
+            new SpawnEggItem(EntityRegistry.CRIMSON_LYCAN_ALPHA, 2, 0, new FabricItemSettings()));
+
+    public static final Item CRIMSON_LYCAN_BETA_SPAWN_EGG = registerItem("encounters/crimson_lycan_b_spawn_egg",
+            new SpawnEggItem(EntityRegistry.CRIMSON_LYCAN_BETA, 3, 0, new FabricItemSettings()));
+
+    public static final Item CRIMSON_LYCAN_GAMMA_SPAWN_EGG = registerItem("encounters/crimson_lycan_g_spawn_egg",
+            new SpawnEggItem(EntityRegistry.CRIMSON_LYCAN_GAMMA, 4, 0, new FabricItemSettings()));
 
 
     // ADVENTURER'S SET ITEMS
